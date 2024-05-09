@@ -301,3 +301,39 @@ function debounce(func, wait, immediate) {
     if (immediate && !timeout) func.apply(context, args);
   };
 };
+
+
+function toggleContent() {
+  var contentContainer = document.querySelector('.content-container');
+  var readMoreBtn = document.getElementById('readMoreBtn');
+
+  if (contentContainer.style.maxHeight === '300px') {
+    contentContainer.style.maxHeight = 'none';
+    readMoreBtn.innerHTML = 'Read Less';
+  } else {
+    contentContainer.style.maxHeight = '300px';
+    readMoreBtn.innerHTML = 'Read More';
+  }
+}
+
+// Define the smoothScrollTo function
+// Define the smoothScrollTo function
+function smoothScrollTo(element) {
+  // Check if the element exists
+  if (document.querySelector(element)) {
+      // Calculate the offset position of the target element
+      const offsetPosition = document.querySelector(element).offsetTop;
+      
+      // Scroll to the target element with smooth behavior
+      window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  }
+}
+
+// Attach click event listener to the SVG element
+document.querySelector('lc-block').addEventListener('click', function() {
+  // Call the smoothScrollTo function with the target element's id
+  smoothScrollTo('#myyy');
+});
