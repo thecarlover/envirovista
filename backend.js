@@ -22,9 +22,10 @@ function submitform(e){
     var name=document.getElementById("naam").value;
     var email=document.getElementById("ema").value;
     var text=document.getElementById("te").value;
+    var me=document.getElementById("cna").value;
 
 
-    saveMessage(name,email,text);
+    saveMessage(name,email,text,me);
 
 
     //enable alert
@@ -47,13 +48,18 @@ function submitform(e){
 }
 
 //store to database
-const saveMessage=(name,email,text)=>{
+const saveMessage=(name,email,text,me)=>{
     var newConcatForm=messform.push();
 
     newConcatForm.set({
         name:name,
         email:email,
-        text:text
+        text:text,
+        me:me
     })
 }
+
+
+
+
 
