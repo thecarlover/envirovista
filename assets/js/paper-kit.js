@@ -337,3 +337,4 @@ document.querySelector('lc-block').addEventListener('click', function() {
   // Call the smoothScrollTo function with the target element's id
   smoothScrollTo('#myyy');
 });
+
