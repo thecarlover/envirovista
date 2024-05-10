@@ -45,7 +45,19 @@ function submitform(e){
     
    
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 //store to database
 const saveMessage=(name,email,text,me)=>{
@@ -55,11 +67,11 @@ const saveMessage=(name,email,text,me)=>{
         name:name,
         email:email,
         text:text,
-        me:me
+        me:me,
+
     })
+   
 }
-
-
 
 
 
